@@ -209,12 +209,22 @@ h3 {
   font-size: clamp(1.1rem, 2vw, 1.35rem);
 }
 
-.lead {
+.lead,
+.strength-list {
   max-width: 760px;
   margin: 1.5rem 0 0;
   color: var(--soft-white);
   font-size: clamp(1.15rem, 2.1vw, 1.55rem);
   line-height: 1.45;
+}
+
+.strength-list {
+  position: relative;
+  margin: 1.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--soft-white);
+  font-size: clamp(1.05rem, 1.9vw, 1.35rem);
+  line-height: 1.65;
 }
 
 .quote-card,
@@ -384,7 +394,7 @@ h3 {
 }
 
 .two-column {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 2.2rem;
 }
 
