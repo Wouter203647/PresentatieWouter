@@ -2,7 +2,6 @@ const slides = Array.from(document.querySelectorAll(".slide"));
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const dotsContainer = document.getElementById("progressDots");
-const notesToggle = document.getElementById("notesToggle");
 const modeToggle = document.getElementById("modeToggle");
 const brand = document.querySelector(".brand");
 
@@ -84,21 +83,8 @@ document.addEventListener("keydown", (event) => {
     event.preventDefault();
     prevSlide();
   }
-
-  if (event.key.toLowerCase() === "n") {
-    document.body.classList.toggle("show-notes");
-    notesToggle.textContent = document.body.classList.contains("show-notes")
-      ? "Verberg spreeknotities"
-      : "Toon spreeknotities";
-  }
 });
 
-notesToggle.addEventListener("click", () => {
-  document.body.classList.toggle("show-notes");
-  notesToggle.textContent = document.body.classList.contains("show-notes")
-    ? "Verberg spreeknotities"
-    : "Toon spreeknotities";
-});
 
 modeToggle.addEventListener("click", () => {
   document.body.classList.toggle("read-mode");
