@@ -27,6 +27,8 @@ function updateButtons() {
 
   prevBtn.style.opacity = currentIndex === 0 ? "0.45" : "1";
   prevBtn.disabled = currentIndex === 0;
+  nextBtn.style.display = "inline-flex";
+  nextBtn.disabled = false;
 }
 
 function updateDots() {

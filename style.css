@@ -752,3 +752,79 @@ body.read-mode .bottom-nav {
     margin-top: 1rem;
   }
 }
+
+
+/* Navigatie blijft altijd zichtbaar, ook op de laatste slide */
+.bottom-nav {
+  display: grid;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-inner.final {
+  margin-bottom: 0;
+}
+
+@media (min-width: 901px) {
+  .slide {
+    padding-bottom: 6.2rem;
+  }
+
+  .bottom-nav {
+    z-index: 100;
+  }
+}
+
+
+/* Focusvakken op laatste slide */
+.focus-strip {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  max-width: 980px;
+}
+
+.focus-strip span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: rgba(74, 201, 255, 0.14);
+  border: 1px solid rgba(74, 201, 255, 0.28);
+  color: var(--white);
+  font-weight: 750;
+}
+
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.thank-you h2 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  letter-spacing: -0.08em;
+}
+
+.thank-you .lead {
+  max-width: 680px;
+}
+
+.thank-you-line {
+  width: min(420px, 70%);
+  height: 0.45rem;
+  margin-top: 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--bright-blue), var(--light-blue));
+  box-shadow: 0 0 32px rgba(74, 201, 255, 0.35);
+}
