@@ -1,100 +1,84 @@
-const slides = Array.from(document.querySelectorAll(".slide"));
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const dotsContainer = document.getElementById("progressDots");
-const modeToggle = document.getElementById("modeToggle");
-const brand = document.querySelector(".brand");
+/* ============================================================
+   WOUTER MALGO — ACI PRESENTATIE
+   script.js
+   ============================================================ */
 
-let currentIndex = 0;
-
-function createDots() {
-  slides.forEach((_, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.setAttribute("aria-label", `Ga naar onderdeel ${index + 1}`);
-    button.addEventListener("click", () => goToSlide(index));
-    dotsContainer.appendChild(button);
+/* ── Scroll-reveal via IntersectionObserver ───────────────── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
   });
-}
-
-function updateButtons() {
-  const current = slides[currentIndex];
-  const prevLabel = current.dataset.prev || "Terug";
-  const nextLabel = current.dataset.next || "Volgende";
-
-  prevBtn.textContent = currentIndex === 0 ? "Terug naar begin" : prevLabel;
-  nextBtn.textContent = currentIndex === slides.length - 1 ? "Terug naar begin" : nextLabel;
-
-  prevBtn.style.opacity = currentIndex === 0 ? "0.45" : "1";
-  prevBtn.disabled = currentIndex === 0;
-  nextBtn.style.display = "inline-flex";
-  nextBtn.disabled = false;
-}
-
-function updateDots() {
-  const dots = Array.from(dotsContainer.querySelectorAll("button"));
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentIndex);
-  });
-}
-
-function goToSlide(index) {
-  if (document.body.classList.contains("read-mode")) {
-    slides[Math.max(0, Math.min(index, slides.length - 1))].scrollIntoView({ behavior: "smooth", block: "start" });
-    return;
-  }
-
-  currentIndex = Math.max(0, Math.min(index, slides.length - 1));
-  slides.forEach((slide, slideIndex) => {
-    slide.classList.toggle("active", slideIndex === currentIndex);
-  });
-
-  updateButtons();
-  updateDots();
-}
-
-function nextSlide() {
-  if (currentIndex === slides.length - 1) {
-    goToSlide(0);
-  } else {
-    goToSlide(currentIndex + 1);
-  }
-}
-
-function prevSlide() {
-  goToSlide(currentIndex - 1);
-}
-
-createDots();
-goToSlide(0);
-
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
-brand.addEventListener("click", (event) => {
-  event.preventDefault();
-  goToSlide(0);
+}, {
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px'
 });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowRight" || event.key === " ") {
-    event.preventDefault();
-    nextSlide();
-  }
-
-  if (event.key === "ArrowLeft") {
-    event.preventDefault();
-    prevSlide();
-  }
-});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 
-modeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("read-mode");
-  const isReadMode = document.body.classList.contains("read-mode");
-  modeToggle.textContent = isReadMode ? "Presentatiemodus" : "Leesmodus";
+/* ── Zijnavigatie: actieve dot bijhouden ─────────────────── */
+const sections = document.querySelectorAll('section[id]');
+const navDots  = document.querySelectorAll('.side-dot');
 
-  if (!isReadMode) {
-    window.scrollTo({ top: 0 });
-    goToSlide(currentIndex);
-  }
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navDots.forEach(d => d.classList.remove('active'));
+      const activeDot = document.querySelector(`.side-dot[href="#${entry.target.id}"]`);
+      if (activeDot) activeDot.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+
+// Hero-sectie apart observeren (heeft id 'hero' op de section zelf)
+const heroSection = document.getElementById('hero');
+if (heroSection) navObserver.observe(heroSection);
+sections.forEach(s => navObserver.observe(s));
+
+
+/* ── KMar-knop interactie ────────────────────────────────── */
+const kmarBtn  = document.getElementById('kmar-btn');
+const kmarHint = document.getElementById('kmar-hint');
+
+if (kmarBtn) {
+  kmarBtn.addEventListener('click', () => {
+    // Voorkom dubbele activatie
+    if (kmarBtn.classList.contains('activated')) return;
+
+    // 1. Voeg kmar-active toe aan <body> → CSS toont de overlays
+    document.body.classList.add('kmar-active');
+
+    // 2. Knopstijl updaten
+    kmarBtn.classList.add('activated');
+    kmarBtn.querySelector('span').textContent = 'Koninklijke Marechaussee — ✓';
+
+    // 3. Hint-tekst updaten
+    if (kmarHint) {
+      kmarHint.textContent = 'Scroll omhoog om de rode draad te zien — scroll omlaag voor het volgende hoofdstuk.';
+    }
+
+    // 4. Scroll terug naar het schoolgedeelte zodat de overlays zichtbaar worden
+    //    (kleine vertraging zodat de CSS-transitie al begint)
+    setTimeout(() => {
+      const schoolNode = document.getElementById('node-school');
+      if (schoolNode) {
+        schoolNode.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 220);
+  });
+}
+
+
+/* ── Smooth anchor-navigatie voor de side-dots ───────────── */
+navDots.forEach(dot => {
+  dot.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = dot.getAttribute('href').slice(1);
+    const target   = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });

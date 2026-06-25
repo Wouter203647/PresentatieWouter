@@ -1,227 +1,366 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ontwikkelreis Wouter Malgo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wouter Malgo — Zelfpresentatie ACI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
 
-  <header class="topbar">
-    <a class="brand" href="#" aria-label="Terug naar begin">
-      <span class="brand-mark"></span>
-      <span>Ontwikkelreis</span>
-    </a>
-
-    <div class="top-actions">
-      <button id="modeToggle" class="ghost-button" type="button">Leesmodus</button>
-    </div>
-  </header>
-
-  <main id="deck" class="deck" aria-live="polite">
-    <section class="slide active" data-prev="" data-next="Wie ben ik?">
-      <div class="slide-inner hero">
-        <p class="eyebrow">Mijn persoonlijke ontwikkelreis</p>
-        <h1>Niet alles kan tegelijk</h1>
-        <p class="lead">Veel energie, veel ideeën en overal mijn best voor willen doen.</p>
-
-        <div class="quote-card">
-          <p>“Mijn doel was om door dit traject mezelf beter te leren kennen, valkuilen te omzeilen en krachten te versterken.”</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Terug naar start" data-next="Mijn leerdoelen">
-      <div class="slide-inner split">
-        <div>
-          <p class="eyebrow">Wie ben ik?</p>
-          <h2>Mijn kracht werd soms ook mijn valkuil</h2>
-          <p class="lead"><ul class="strength-list"><li>Energiek</li><li>Betrokken</li><li>Verantwoordelijk</li><li>Proactief</li><li>Flexibel</li><li>Kritisch op het juiste moment</li></ul></p>
-        </div>
-
-        <div class="cards">
-          <article class="mini-card">
-            <h3>Snel ja zeggen</h3>
-            <p>Ik probeerde veel tegelijk op te pakken.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Veel verantwoordelijkheid</h3>
-            <p>Ik trok soms meer naar mezelf toe dan nodig.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Functioneren in chaos</h3>
-            <p>Handig, maar soms verloor ik daardoor overzicht.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Wie ben ik?" data-next="Wat leerde ik?">
-      <div class="slide-inner">
-        <p class="eyebrow">Waar ben ik aan gaan werken?</p>
-        <h2>Drie leerdoelen met één rode draad</h2>
-
-        <div class="goal-grid">
-          <article class="goal-card">
-            <h3>Grenzen stellen</h3>
-            <p>Nee zeggen zonder het gevoel te hebben dat ik iemand laat vallen.</p>
-          </article>
-          <article class="goal-card">
-            <h3>Structuur creëren</h3>
-            <p>Meer overzicht krijgen, zonder mijn energie en flexibiliteit kwijt te raken.</p>
-          </article>
-          <article class="goal-card">
-            <h3>Regie pakken</h3>
-            <p>Duidelijker mijn rol nemen in overleggen en situaties waarvoor ik verantwoordelijk ben.</p>
-          </article>
-        </div>
-
-        <div class="statement">
-          Meer regie nemen over mijn eigen rol.
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Mijn leerdoelen" data-next="Usergroup">
-      <div class="slide-inner story">
-        <p class="eyebrow">Wat ik onderweg heb geleerd</p>
-        <h2>Nee zeggen en prioriteit bepalen</h2>
-        <p class="lead">Om anderen tevreden te maken, pakte ik zelf alles maar op.</p>
-
-        <div class="placeholder">
-          <span>De dramadriehoek van vragen over Parts360</span>
-          <p>Veel kanalen, veel vragen en altijd te veel werk.</p>
-        </div>
-
-        <div class="insight-row">
-          <div>
-            <h3>Oude reflex</h3>
-            <p>Doorgaan, overlopen en te veel dingen tegelijk.</p>
-          </div>
-          <div>
-            <h3>Nieuwe beweging</h3>
-            <p>Afstand nemen, mijn eigen rol bekijken en prioriteit bepalen.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Wat leerde ik?" data-next="Wat veranderde?">
-      <div class="slide-inner split reverse">
-        <div>
-          <h2>Parts360 Usergroup</h2>
-          <p class="lead">Ik nam eigenaarschap serieus. Soms té serieus.</p>
-
-          <div class="quote-card compact">
-            <p>“Eigenaarschap betekent niet dat ik alles zelf moet oplossen.”</p>
-          </div>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <span></span>
-            <p>Ik voelde mij verantwoordelijk voor de Usergroup.</p>
-          </div>
-          <div class="timeline-item">
-            <span></span>
-            <p>Ik vroeg te weinig hulp, terwijl ik die wel nodig had.</p>
-          </div>
-          <div class="timeline-item">
-            <span></span>
-            <p>Ik leerde uiteindelijk eerder signaleren, delen en de juiste mensen betrekken.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Parts360" data-next="Mensen">
-      <div class="slide-inner">
-        <p class="eyebrow">Wat doe ik nu anders?</p>
-        <h2>Van altijd ja naar bewuster kiezen</h2>
-
-        <div class="change-list">
-          <article>
-            <h3>Ik bespreek prioriteiten eerder</h3>
-            <p>Niet alles kan tegelijk, dus ik vraag vaker expliciet wat eerst moet.</p>
-          </article>
-          <article>
-            <h3>Ik maak grenzen duidelijker</h3>
-            <p>Nee of “niet nu” zeggen voelt minder als blokkeren en meer als professioneel kiezen.</p>
-          </article>
-          <article>
-            <h3>Ik kijk vaker naar mijn eigen aandeel</h3>
-            <p>Bij irritatie probeer ik sneller te zien wat er echt speelt.</p>
-          </article>
-          <article>
-            <h3>Ik vraag eerder hulp</h3>
-            <p>Nog steeds een leerdoel, maar wel iets waar ik bewuster mee bezig ben.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Wat veranderde?" data-next="Mijn conclusie">
-      <div class="slide-inner story">
-        <p class="eyebrow">Leren buiten de trainingsdagen</p>
-        <h2>Buddy’s, onderzoek en mijn eigen begeleiding</h2>
-        <p class="lead">Niet alle lessen kwamen uit modellen of trainingsdagen. Sommige lessen kwamen uit de mensen om mij heen.</p>
-
-        <div class="two-column">
-          <article class="feature-card">
-            <h3>Onderzoek</h3>
-            <p>Waardevol om intensief met één persoon samen te werken en nieuwe mensen met eigen ervaringen te spreken.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Buddy’s</h3>
-            <p>Mijn eerste buddy liet me inzien hoe ik reageer als iemand minder betrokken is. Mijn tweede buddy leerde me om op te komen voor mezelf.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Begeleiding</h3>
-            <p>Mijn leidinggevende was niet aanwezig. Hier ging ik niet goed mee om.</p>
-          </article>
-        </div>
-
-        <div class="statement">
-          Niet afwachten, maar zelf beweging creëren.
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" data-prev="Mensen" data-next="Dankjewel">
-      <div class="slide-inner final">
-        <p class="eyebrow">Waar sta ik nu?</p>
-        <h2>Eigenaarschap betekent niet dat ik alles zelf moet oplossen</h2>
-        <p class="lead final-lead">Ik wil mijn energie blijven gebruiken, maar met meer rust, structuur en bewuste keuzes. Zo wil ik groeien in mijn rol als product owner en mij verder ontwikkelen richting een toekomstige leidinggevende rol.</p>
-
-        <div class="focus-strip">
-          <span>Eerder hulp vragen</span>
-          <span>Regie pakken</span>
-          <span>Mezelf serieuzer nemen</span>
-          <span>Daadkracht en niet afwachtend</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="slide thank-you-slide" data-prev="Mijn conclusie" data-next="Terug naar begin">
-      <div class="slide-inner thank-you">
-        <h2>Dank jullie wel</h2>
-        <p class="lead">Bedankt voor jullie aandacht.</p>
-
-        <div class="thank-you-line"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <nav class="bottom-nav" aria-label="Presentatie navigatie">
-    <button id="prevBtn" class="nav-button secondary" type="button">Terug</button>
-    <div class="progress-dots" id="progressDots" aria-hidden="true"></div>
-    <button id="nextBtn" class="nav-button primary" type="button">Volgende</button>
+  <!-- Zijnavigatie (dots) -->
+  <nav class="side-nav" aria-label="Paginanavigatie">
+    <a href="#hero"     class="side-dot" data-label="Wie ben ik"></a>
+    <a href="#hobbys"   class="side-dot" data-label="Hobby's"></a>
+    <a href="#loopbaan" class="side-dot" data-label="Loopbaan"></a>
+    <a href="#karakter" class="side-dot" data-label="Karakter"></a>
+    <a href="#kmar"     class="side-dot" data-label="KMar"></a>
+    <a href="#boek"     class="side-dot" data-label="Toekomst"></a>
   </nav>
+
+  <!-- ══════════════════════════════════
+       HERO — Wie ben ik?
+  ══════════════════════════════════════ -->
+  <section id="hero" class="s-hero">
+    <div class="hero-grid">
+
+      <div class="hero-col-photo">
+        <!-- Portretfoto — vervang door jouw bestand als naam anders is -->
+        <img src="images/IMG_3270_2.JPG" alt="Wouter Malgo" class="hero-portrait">
+      </div>
+
+      <div class="hero-col-text">
+        <span class="overline">Zelfpresentatie · ACI Koninklijke Marechaussee</span>
+        <h1 class="hero-name">Wouter<br>Malgo</h1>
+        <p class="hero-roles">Product Owner · Bruggenbouwer · Marechaussee in spe</p>
+
+        <div class="hero-family-block">
+          <img src="images/IMG_8520.JPG" alt="Mijn familie" class="hero-family-img">
+          <p class="img-caption">Mijn fundament — familie geeft richting en energie</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Mijn verhaal</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TIJDLIJN
+  ══════════════════════════════════════ -->
+  <main class="tl-wrap">
+    <div class="tl-line" aria-hidden="true"></div>
+
+    <!-- ── HOBBY'S ── -->
+    <section id="hobbys">
+      <div class="tl-entry left reveal">
+        <div class="entry-content left-c">
+          <span class="overline">Vrije tijd</span>
+          <h2>Wat mij energie geeft</h2>
+          <p class="entry-text">Buiten mijn werk laad ik op bij sport, cultuur en mensen. Een actieve en nieuwsgierige houding maakt mij ook professioneel scherper.</p>
+          <div class="hobby-grid">
+            <div class="hobby-tile">
+              <i class="fas fa-table-tennis-paddle-ball"></i>
+              <span>Padel</span>
+            </div>
+            <div class="hobby-tile">
+              <i class="fas fa-dumbbell"></i>
+              <span>Sportschool</span>
+            </div>
+            <div class="hobby-tile">
+              <i class="fas fa-book-open"></i>
+              <span>Lezen</span>
+            </div>
+            <div class="hobby-tile">
+              <i class="fas fa-landmark-dome"></i>
+              <span>Geschiedenis</span>
+            </div>
+            <div class="hobby-tile photo-tile">
+              <img src="images/IMG_2039.JPG" alt="Stedentrip Budapest">
+              <span>Stedentrips</span>
+            </div>
+            <div class="hobby-tile">
+              <i class="fas fa-people-group"></i>
+              <span>Gezelligheid</span>
+            </div>
+          </div>
+        </div>
+        <div class="entry-dot"></div>
+      </div>
+    </section>
+
+    <!-- ── LOOPBAAN ── -->
+    <section id="loopbaan">
+      <div class="section-intro reveal">
+        <span class="overline">Loopbaan</span>
+        <h2 class="section-h2">Mijn achtergrond</h2>
+      </div>
+
+      <!-- Onderwijs -->
+      <div class="tl-entry right reveal" id="node-school">
+        <div class="entry-dot"></div>
+        <div class="entry-content right-c">
+          <span class="entry-period">2004 – 2016</span>
+          <h3>Basisschool &amp; Middelbaar Onderwijs</h3>
+          <p class="entry-text">Hier leerde ik omgaan met structuur en regels, maar ook met verantwoordelijkheid nemen en samenwerken. De basis voor alles wat daarna kwam.</p>
+          <div class="logo-row">
+            <div class="logo-card">
+              <img src="images/WebsitePostiljon_logo.png" alt="CBS De Postiljon">
+              <span>CBS De Postiljon</span>
+            </div>
+            <div class="logo-card">
+              <img src="images/cropped-Logo-eemland.png" alt="Het Nieuwe Eemland">
+              <span>Het Nieuwe Eemland</span>
+            </div>
+          </div>
+          <!-- KMar-overlay: verborgen tot de knop wordt ingedrukt -->
+          <div class="kmar-overlay">
+            <div class="badge badge-kmar">
+              <i class="fas fa-shield-halved"></i>
+              <span>Koninklijke Marechaussee</span>
+            </div>
+            <div class="badge badge-politie">
+              <i class="fas fa-star"></i>
+              <span>Politie Nederland</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bijbaantjes -->
+      <div class="tl-entry left reveal" id="node-bijbaan">
+        <div class="entry-content left-c">
+          <span class="entry-period">2014 – 2019</span>
+          <h3>Bijbaantjes</h3>
+          <p class="entry-text">In de horeca en retail leerde ik snel schakelen, omgaan met druk en samenwerken met heel verschillende mensen. Klantgerichtheid zit er sindsdien in.</p>
+          <div class="logo-row logo-row-end">
+            <div class="logo-card">
+              <img src="images/images.jpeg" alt="PLUS Supermarkt">
+              <span>PLUS</span>
+            </div>
+            <div class="logo-card logo-card-wide">
+              <img src="images/de-vuursche-boer.jpg" alt="De Vuursche Boer">
+              <span>De Vuursche Boer</span>
+            </div>
+            <div class="logo-card">
+              <img src="images/images-2.jpeg" alt="Compartijn">
+              <span>Compartijn</span>
+            </div>
+          </div>
+        </div>
+        <div class="entry-dot"></div>
+      </div>
+
+      <!-- Studie + Smartphonehoesjes -->
+      <div class="tl-entry right reveal" id="node-studie">
+        <div class="entry-dot"></div>
+        <div class="entry-content right-c">
+          <span class="entry-period">2017 – 2020</span>
+          <h3>Studie &amp; Eerste Ondernemerschap</h3>
+          <p class="entry-text">AD E-Commerce bij Windesheim gaf mij een solide digitale basis. Bij smartphonehoesjes.nl draaide ik een volledig webshop-proces zelf — van inkoop tot klantenservice.</p>
+          <div class="logo-row">
+            <!-- Windesheim placeholder: vervang door het echte logo als je dat hebt -->
+            <div class="logo-card logo-card-placeholder">
+              <div class="text-badge">
+                <span class="tb-initial">W</span>
+                <div class="tb-text">
+                  <strong>Hogeschool Windesheim</strong>
+                  <small>AD E-Commerce</small>
+                </div>
+              </div>
+            </div>
+            <div class="logo-card">
+              <img src="images/images.png" alt="smartphonehoesjes.nl">
+              <span>smartphonehoesjes.nl</span>
+            </div>
+          </div>
+          <div class="kmar-overlay">
+            <div class="badge badge-kmar">
+              <i class="fas fa-shield-halved"></i>
+              <span>Koninklijke Marechaussee</span>
+            </div>
+            <div class="badge badge-politie">
+              <i class="fas fa-star"></i>
+              <span>Politie Nederland</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alliance Automotive Group -->
+      <div class="tl-entry left reveal" id="node-aag">
+        <div class="entry-content left-c">
+          <span class="entry-period">2021 – heden</span>
+          <h3>Product Owner · Alliance Automotive Group</h3>
+          <p class="entry-text">Als Product Owner bij Parts360 verbind ik techniek met business, stuur ik op waarde en zet ik mensen in hun kracht — op een B2B e-commerce platform voor de Benelux.</p>
+          <div class="logo-row logo-row-end">
+            <div class="logo-card logo-card-xl">
+              <img src="images/img-alliance-automotive-group-logo.png" alt="Alliance Automotive Group">
+            </div>
+          </div>
+          <div class="kmar-overlay">
+            <div class="badge badge-kmar">
+              <i class="fas fa-shield-halved"></i>
+              <span>Koninklijke Marechaussee</span>
+            </div>
+          </div>
+        </div>
+        <div class="entry-dot"></div>
+      </div>
+    </section>
+
+    <!-- ── KARAKTER & DRIJFVEREN ── -->
+    <section id="karakter">
+      <div class="tl-entry right reveal">
+        <div class="entry-dot entry-dot-lg"></div>
+        <div class="entry-content right-c">
+          <span class="overline">Van binnen</span>
+          <h2>Karakter &amp; drijfveren</h2>
+          <p class="entry-text">Ik heb mezelf de afgelopen jaren beter leren kennen. Mijn krachten zijn soms ook mijn valkuil — ik werk er bewust aan.</p>
+        </div>
+      </div>
+
+      <div class="k-cards reveal">
+        <div class="k-card k-gold">
+          <div class="k-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Krachten</h3>
+          <ul>
+            <li>Energiek en betrokken</li>
+            <li>Verantwoordelijk</li>
+            <li>Proactief</li>
+            <li>Flexibel</li>
+            <li>Kritisch op het juiste moment</li>
+          </ul>
+        </div>
+        <div class="k-card k-red">
+          <div class="k-icon"><i class="fas fa-triangle-exclamation"></i></div>
+          <h3>Waar ik aan werk</h3>
+          <ul>
+            <li>Grenzen stellen — nee zeggen</li>
+            <li>Minder naar mezelf toetrekken</li>
+            <li>Overzicht bewaren in chaos</li>
+          </ul>
+        </div>
+        <div class="k-card k-navy">
+          <div class="k-icon"><i class="fas fa-compass"></i></div>
+          <h3>Drijfveren</h3>
+          <ul>
+            <li>Groeien in eigen competenties</li>
+            <li>Mensen in hun kracht zetten</li>
+            <li>Werken in een dynamische omgeving</li>
+            <li>Bijdragen aan maatschappij</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── KMAR KNOP ── -->
+    <section id="kmar" class="s-kmar">
+      <!-- Gecentreerde dot op de tijdlijn -->
+      <div class="kmar-dot-row" aria-hidden="true">
+        <div class="entry-dot entry-dot-kmar"></div>
+      </div>
+      <!-- Gecentreerde inhoud -->
+      <div class="kmar-block reveal">
+        <p class="kmar-tagline">Al die ervaringen — één richting:</p>
+        <button id="kmar-btn" class="kmar-btn" aria-label="Onthul de Marechaussee-verbinding">
+          <i class="fas fa-shield-halved"></i>
+          <span>Koninklijke Marechaussee</span>
+        </button>
+        <p class="kmar-hint" id="kmar-hint">Druk om te zien hoe alles samenvalt</p>
+      </div>
+    </section>
+
+    <!-- ── BOEK ── -->
+    <section id="boek" class="s-boek">
+      <div class="tl-entry left reveal">
+        <div class="entry-content left-c">
+          <span class="overline">Het volgende hoofdstuk</span>
+          <h2>Geschreven &amp; te schrijven</h2>
+        </div>
+        <div class="entry-dot"></div>
+      </div>
+
+      <div class="book-wrap reveal">
+        <div class="book" role="img" aria-label="Open boek: links mijn loopbaan, rechts de toekomst bij de Marechaussee">
+          <!-- Linkerpagina: loopbaan in tekst -->
+          <div class="book-page page-left">
+            <h4 class="page-title">Mijn weg tot nu toe</h4>
+            <div class="book-list">
+              <div class="bl-row">
+                <span class="bl-year">~2004</span>
+                <span class="bl-item">CBS De Postiljon</span>
+              </div>
+              <div class="bl-row">
+                <span class="bl-year">~2010</span>
+                <span class="bl-item">Het Nieuwe Eemland</span>
+              </div>
+              <div class="bl-row">
+                <span class="bl-year">~2014</span>
+                <span class="bl-item">PLUS · De Vuursche Boer · Compartijn</span>
+              </div>
+              <div class="bl-row">
+                <span class="bl-year">~2017</span>
+                <span class="bl-item">
+                  Hogeschool Windesheim
+                  <small>AD E-Commerce</small>
+                </span>
+              </div>
+              <div class="bl-row">
+                <span class="bl-year">~2019</span>
+                <span class="bl-item">smartphonehoesjes.nl</span>
+              </div>
+              <div class="bl-row">
+                <span class="bl-year">2021</span>
+                <span class="bl-item">
+                  Alliance Automotive Group
+                  <small>Product Owner, Parts360</small>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ruggengraat -->
+          <div class="book-spine" aria-hidden="true"></div>
+
+          <!-- Rechterpagina: half geschreven KMar -->
+          <div class="book-page page-right">
+            <div class="writing-area">
+              <p class="w-line">Koninklijke</p>
+              <p class="w-line">Mare<span class="blink-cursor" aria-hidden="true">|</span></p>
+            </div>
+            <div class="pen-area" aria-hidden="true">
+              <!-- Pen SVG -->
+              <svg class="pen-svg" viewBox="0 0 50 165" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dop -->
+                <rect x="16" y="0" width="18" height="18" rx="3" fill="#B8942A"/>
+                <!-- Body -->
+                <rect x="16" y="16" width="18" height="102" rx="2" fill="#1C2B4B"/>
+                <!-- Clip -->
+                <rect x="31" y="22" width="4" height="74" rx="2" fill="rgba(184,148,42,0.75)"/>
+                <!-- Metalen ring -->
+                <rect x="19" y="116" width="12" height="10" rx="1" fill="#999"/>
+                <!-- Punt (conisch) -->
+                <polygon points="19,126 31,126 25,150" fill="#B8942A"/>
+                <!-- Pennenstreep -->
+                <line x1="25" y1="150" x2="25" y2="160" stroke="#1E1E2C" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="boek-outro reveal">Het volgende hoofdstuk begint hier. Bij de Koninklijke Marechaussee.</p>
+    </section>
+
+  </main><!-- einde tl-wrap -->
 
   <script src="script.js"></script>
 </body>
