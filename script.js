@@ -54,9 +54,9 @@ if (kmarBtn) {
     kmarBtn.classList.add('activated');
     kmarBtn.querySelector('span').textContent = 'Koninklijke Marechaussee — ✓';
 
-    // 3. Hint-tekst updaten
+    // 3. Hint leeg laten
     if (kmarHint) {
-      kmarHint.textContent = 'Scroll omhoog om de rode draad te zien — scroll omlaag voor het volgende hoofdstuk.';
+      kmarHint.textContent = '';
     }
 
     // 4. Scroll terug naar het schoolgedeelte zodat de overlays zichtbaar worden
